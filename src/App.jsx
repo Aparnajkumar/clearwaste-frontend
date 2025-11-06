@@ -17,6 +17,7 @@ import Managepayment from './Admin/Managepayment'
 import Managebooking from './Admin/Managebooking'
 import Managepickup from './Admin/Managepickup'
 import { ToastContainer } from 'react-toastify'
+import Profile from './User/Profile'
 
 function App() {
 
@@ -33,13 +34,14 @@ function App() {
         <Route path="/bookpickup" element={<BookPickUp />} />
         <Route path="/confirmation" element={<BookingConfirmation />} />
         <Route path="/payment" element={<Payment />} />
-        <Route path="/status" element={<TrackStatus />} />
+        <Route path="/status/:id" element={<TrackStatus />} />
         <Route path="/userhome" element={<UserHome />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/manageuser" element={<Manageuser />} />
         <Route path="/managepayment" element={<Managepayment />} />
         <Route path="/managebooking" element={<Managebooking />} />
         <Route path="/managepickup" element={<Managepickup />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
                     <ToastContainer position="top-center" autoClose={3000} theme='colored'/>
 

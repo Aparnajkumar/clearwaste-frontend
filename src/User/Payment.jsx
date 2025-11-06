@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 function Payment() {
   return (
     <>
-    <Header/>
+    {/* <Header/>
       <div className="">
         <h1 className='text-2xl text-center p-3 text-blue-800 font-semibold'>Make payment</h1>
       </div>
@@ -26,7 +28,19 @@ function Payment() {
 
         </Link>
       </div>
-      <Footer/>
+      <Footer/> */}
+
+
+            <Userheader />
+            <div className="">
+              <h1 className='font-bold text-red-600 text-center p-3 text-2xl'>Sorry!!! Transaction failed </h1>
+              <div className='flex justify-center items-center'>
+                <img className='w-72' src="https://media.licdn.com/dms/image/v2/C5112AQGiR7AdalYNjg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1582176281444?e=2147483647&v=beta&t=KbpvWM0SaQqnLiMtyKfvGLj9Ta1YugKhz9Y-LN1uS2A" alt="" />
+      
+              </div>
+
+            </div>
+            <Footer />
     </>
   )
 }
