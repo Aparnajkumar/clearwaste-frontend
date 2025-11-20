@@ -62,7 +62,7 @@ function Profile() {
         <>
             <Userheader />
             <div className="shadow-2xl rounded md:m-25  p-5  gap-3 ">
-                <h2 className="text-2xl font-bold text-center  text-blue-700 mb-6">Profile</h2>
+                <h2 className="text-2xl font-bold text-center  text-indigo-900 mb-6">Profile</h2>
             
                     <div className=""></div>
                     <div className=''>

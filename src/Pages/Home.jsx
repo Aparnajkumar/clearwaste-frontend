@@ -9,16 +9,22 @@ function Home() {
     <>
       <Header />
       <div className=' pt-10'>
-        <div className='m-15 mt-0 p-8 text-center border-indigo bg-[#F4F8FF]  shadow-2xl  font-extrabold font-mono'>
+        <div className='m-15 mt-0 p-8 text-center border-indigo bg-[#F4F8FF]  shadow-xl rounded-3xl font-extrabold font-mono'>
           <h1 className='text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-green-600 to-indigo-900 bg-clip-text text-transparent drop-shadow-sm tracking-wide'>ClearWaste</h1>
           <p className='text-2xl text-gray-700 font-medium italic"'>“Smarter Disposal, Cleaner Tomorrow.”</p>
-          <div className="w-24 md:w-32 h-1 bg-green-500 mx-auto mt-4 rounded-full"></div>
+<div className='flex justify-center items-center gap-6 mt-6'>
+
+            <img src="public/pexels-julia-m-cameron-6995367.jpg" alt="" className='w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105'/>
+                        <img src="public/pexels-cottonbro-6591427.jpg" alt="" className='w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105'/>
+           <img src="public/pexels-steve-850216.jpg" alt="" className='w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105'/>
+</div>
+          <div className="w-24 md:w-32 h-1.5 bg-green-500 mx-auto mt-4 rounded-full"></div>
 
         </div>
 
 
 
-        <div className=' p-5 bg-sky-50  grid grid-cols-2  justify-center items-center '>
+        <div className=' p-5 bg-sky-50  md:grid grid-cols-2  justify-center items-center '>
           <div className='text-center'>
             <p className='text-2xl text-indigo-900 p-2'>Pay just ₹40/kg for garbbage</p>
             <p className='text-xl'>“ Choosing Us makes Waste Management Clear & Simple.”</p>

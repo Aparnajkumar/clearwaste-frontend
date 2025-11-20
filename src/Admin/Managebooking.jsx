@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Adminheader from '../components/Adminheader';
-import { getalluserAPI, getalluserbookingsAPI, updatestatusAPI, userbookinghistoryAPI } from '../services/allapi';
+import { deletebookingAPI, getalluserAPI, getalluserbookingsAPI, updatestatusAPI, userbookinghistoryAPI } from '../services/allapi';
 
 function Managebooking() {
   const [bookings, setBookings] = useState([])
-
+  const [deletebooking,setDeletebooking]=useState("")
 
   const getbookings = async (token) => {
     //create header
@@ -16,6 +16,13 @@ function Managebooking() {
     setBookings(result.data)
   }
 
+  const handleDelete=async(id)=>{
+    const result = await deletebookingAPI(id)
+    console.log(result);
+    setDeletebooking(result)
+    
+  }
+
   const updateStatus = async (id,newstatus) => {
     const token = sessionStorage.getItem("token")
     const reqheader = {
@@ -24,6 +31,8 @@ function Managebooking() {
 const reqbody={status:newstatus}
     const result = await updatestatusAPI(id,reqbody,reqheader)
     console.log(result);
+      getbookings(token)
+
   }
 
   useEffect(() => {
@@ -32,7 +41,7 @@ const reqbody={status:newstatus}
       getbookings(token)
     }
   }
-    , [])
+    , [deletebooking])
 
 
   return (
@@ -51,7 +60,7 @@ const reqbody={status:newstatus}
                 <th className="p-3 text-left">Date</th>
                 <th className="p-3 text-left">weight</th>
                 <th className="p-3 text-left">Amount</th>
-                {/* <th className="p-3 text-left">Payment</th> */}
+                <th className="p-3 text-left">Payment</th>
                 <th className="p-3 text-left">Pickup</th>
                 <th className="p-3 text-center">Actions</th>
               </tr>
@@ -68,13 +77,13 @@ const reqbody={status:newstatus}
                   <td className="p-3">{new Date(booking.date).toLocaleDateString("en-GB")}</td>
                   <td className="p-3">{booking.weight}</td>
                   <td className="p-3 font-semibold">{booking.amount}</td>
-                  {/* <td
+                  <td
                   className={`p-3 font-semibold ${
-                    booking.payment === "Paid" ? "text-green-600" : "text-red-600"
+                    booking.pstatus === "Paid" ? "text-green-600" : "text-red-600"
                   }`}
                 >
-                  {booking.payment}
-                </td> */}
+                  {booking.pstatus}
+                </td>
                   {/* <td className="p-3">{booking.status}</td> */}
                   <td className=" text-center ">
                     <select
@@ -87,7 +96,7 @@ const reqbody={status:newstatus}
                       <option>Completed</option>
                       <option>Cancelled</option>
                     </select></td><td className='text-center'>
-                    <button className="px-3 py-1 rounded bg-gray-600 text-white">
+                    <button onClick={()=>{handleDelete(booking._id)}} className="px-3 py-1 rounded bg-gray-600 text-white">
                       Delete
                     </button>
                   </td>

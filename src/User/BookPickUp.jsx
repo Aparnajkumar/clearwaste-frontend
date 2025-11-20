@@ -95,7 +95,7 @@ function BookPickUp() {
         <>
             <Userheader />
             <div className=" m-10 text-indigo-900 font-medium shadow-2xs">
-                <h1 className='text-center text-indigo-900 text-2xl p-6'>Book a Waste PickUp </h1>
+                <h1 className='text-center font-bold text-indigo-900 text-2xl p-6'>Book a Waste PickUp </h1>
                 <form action="" className=' shadow-2xl space-y-4 p-4'>
                     <div>
                         <label htmlFor="">Choose Waste Type : </label>

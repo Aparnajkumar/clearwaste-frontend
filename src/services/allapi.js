@@ -46,3 +46,13 @@ export const getalluserbookingsAPI= async () => {
 export const updatestatusAPI=async(id,reqBody,reqHeader)=>{
     return await commonAPI("PUT",`${serverURL}/updatebookingstatus/${id}`,reqBody,reqHeader)
 }
+
+//delete a user
+export const deleteuserAPI=async(id)=>{
+    return await commonAPI("DELETE",`${serverURL}/deleteuser/${id}`)
+}
+
+//delete booking
+export const deletebookingAPI=async(id)=>{
+    return await commonAPI("DELETE",`${serverURL}/deletebooking/${id}`)
+}

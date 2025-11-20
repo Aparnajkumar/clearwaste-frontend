@@ -48,10 +48,10 @@ function UserHome() {
         <div className='relative w-full min-h-screen '>
           <img className=' absolute inset-0 max-w-full object-contain h-full mx-auto' src="/img5.jpg" alt="" />
           <div className='relative z-10 p-6 '>
-            <div className='flex '><FaUserCircle className='text-3xl ' />
+            {/* <div className='flex '><FaUserCircle className='text-3xl ' />
               <h1 className='font-extrabold  relative z-10'>Welcome <span className='text-green-800'>{profiledetails?.username}</span></h1>
-            </div>
-            <p className='text-center z-10 pt-4 text-2xl relative text-indigo-900'>We are there to Clear your waste</p>
+            </div> */}
+            <p className='text-center z-10 pt-4 text-2xl font-bold relative text-indigo-900'>We are there to Clear your waste</p>
 
             <div className="grid z-20 grid-cols-1 md:grid-cols-3  mt-15  text-center  ">
 

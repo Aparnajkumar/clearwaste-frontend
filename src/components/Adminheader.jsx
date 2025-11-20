@@ -13,16 +13,16 @@ function Adminheader() {
             <>
                   <nav className='bg-indigo-300 p-5 flex justify-evenly items-center'>
                         <Link to={"/dashboard"}>
-                              <strong className='md:ms-20 text-black md:text-3xl'> Dashboard</strong>
+                              <strong className='md:ms-10 text-black md:text-3xl'> Dashboard</strong>
                         </Link>
                         <Link to={"/manageuser"}>
-                              <p className='border-4 border-blue-200 p-2 rounded bg-indigo-200'>Manage Users</p>
+                              <p className='border-4 border-blue-200 p-1 rounded bg-indigo-200'>Users</p>
                         </Link>
                         <Link to={"/managebooking"}>
-                              <p className='border-4 border-blue-200 p-2 rounded bg-indigo-200'>Booking history</p>
+                              <p className='border-4 border-blue-200 p-1 rounded bg-indigo-200'>Bookings</p>
                         </Link>
                         <Link to={"/managepayment"}>
-                              <p className='border-4 border-blue-200 p-2 rounded bg-indigo-200'>Payment history</p>
+                              <p className='border-4 border-blue-200 p-1 rounded bg-indigo-200'>Payments</p>
                         </Link>
                         <button onClick={handleLogout} className='border p-2 rounded-2xl border-amber-200 bg-green-300 text-green-950' >Logout</button>
                   </nav>

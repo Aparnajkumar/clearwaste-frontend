@@ -40,7 +40,7 @@ function TrackStatus() {
     <>
       <Userheader/>
       <div className=" " >
-        <h1 className='text-center text-2xl text-indigo-800 mt-4 p-4'>Track Your Booking Status</h1>
+        <h1 className='text-center font-bold text-2xl text-indigo-900 mt-4 p-4'>Track Your Booking Status</h1>
 
         <div className='mb-15 mt-8  bg-cover bg-center flex justify-center   items-center ' style={{ backgroundImage: "url('')" }}>
           <div className="   border-8 border-blue-200 shadow-2xl p-2 bg-indigo-200 rounded">

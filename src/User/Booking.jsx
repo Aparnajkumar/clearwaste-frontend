@@ -79,7 +79,7 @@ function Booking() {
                                     <td className={`p-3  border-1 border-gray-200 ${booking.payment === "Paid"
                                         ? "text-green-600"
                                         : "text-red-600"
-                                        }`}>{booking.payment}</td>
+                                        }`}>{booking.pstatus}</td>
                                 </tr>))
                             :
                             <p>There are no previous bookings....</p>}

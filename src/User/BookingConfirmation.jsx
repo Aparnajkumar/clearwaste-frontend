@@ -8,9 +8,9 @@ function BookingConfirmation() {
     <>
       <Userheader />
       <div className="">
-        <h1 className='font-bold text-center p-3 text-2xl'>Payment Received </h1>
+        <h1 className='font-bold text-center p-7 text-2xl'>Payment Received </h1>
         <div className='flex justify-center items-center'>
-          <img className='w-72' src="https://png.pngtree.com/png-clipart/20250530/original/pngtree-green-tick-symbol-approved-png-image_21096884.png" alt="" />
+          <img className='w-72 mb-2' src="https://png.pngtree.com/png-clipart/20250530/original/pngtree-green-tick-symbol-approved-png-image_21096884.png" alt="" />
 
         </div>
 

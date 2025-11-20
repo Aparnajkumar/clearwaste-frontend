@@ -8,9 +8,9 @@ function About() {
       <Header />
       <div className="min-h-screen bg-sky-50" style={{ backgroundImage: "url('')" }}>
 
-        <h1 className='p-4 text-center font-semibold text-2xl text-indigo-500'>About Us </h1>
+        <h1 className='p-4 text-center font-bold text-2xl text-indigo-900'>About Us </h1>
 
-        <div className="m-5 p-5   text-indigo-950 "> <p>
+        <div className="m-5 p-5 text-xl  text-indigo-950 "> <p>
           We believe that solid waste management is not merely a technical challenge—it is a social one. Our work across more than 50 cities and with over 20,000 individuals shows that behavior change and community engagement are critical.
 
           Our key focus areas include:
