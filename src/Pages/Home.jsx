@@ -14,8 +14,8 @@ function Home() {
           <p className='text-2xl text-gray-700 font-medium italic"'>“Smarter Disposal, Cleaner Tomorrow.”</p>
           <div className='md:flex justify-center items-center space-y-5 gap-6 mt-6'>
 
-            <img src="/pexels-julia-m-cameron-6995367.jpg" alt="" className='md: mb-2 w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105' />
-            <img src="/pexels-cottonbro-6591427.jpg" alt="" className=' md:mb-2 w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105' />
+            <img src="/pexels-julia-m-cameron-6995367.jpg" alt="" className=' w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105' />
+            <img src="/pexels-cottonbro-6591427.jpg" alt="" className='  w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105' />
             <img src="/pexels-steve-850216.jpg" alt="" className='w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105' />
           </div>
           <div className="w-24 md:w-32 h-1.5 bg-green-500 mx-auto mt-4 rounded-full"></div>
