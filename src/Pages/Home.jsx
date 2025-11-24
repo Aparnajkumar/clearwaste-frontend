@@ -14,9 +14,9 @@ function Home() {
           <p className='text-2xl text-gray-700 font-medium italic"'>“Smarter Disposal, Cleaner Tomorrow.”</p>
 <div className='flex justify-center items-center gap-6 mt-6'>
 
-            <img src="public/pexels-julia-m-cameron-6995367.jpg" alt="" className='w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105'/>
-                        <img src="public/pexels-cottonbro-6591427.jpg" alt="" className='w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105'/>
-           <img src="public/pexels-steve-850216.jpg" alt="" className='w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105'/>
+            <img src="/pexels-julia-m-cameron-6995367.jpg" alt="" className='w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105'/>
+                        <img src="/pexels-cottonbro-6591427.jpg" alt="" className='w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105'/>
+           <img src="/pexels-steve-850216.jpg" alt="" className='w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105'/>
 </div>
           <div className="w-24 md:w-32 h-1.5 bg-green-500 mx-auto mt-4 rounded-full"></div>
 
@@ -30,7 +30,7 @@ function Home() {
             <p className='text-xl'>“ Choosing Us makes Waste Management Clear & Simple.”</p>
             <Link to={"/auth"}>      <button type='button' className='mt-5  bg-sky-600 text-white border border-blue-700 hover:bg-blue-900 hover:text-white p-3 rounded'>Book PickUp</button></Link>
           </div>
-          <div className='flex justify-center'>    <img className='w-80 md:w-[400px]  hover:scale-105 transition-transform duration-500' src="public/img2.webp" alt="" /></div>
+          <div className='flex justify-center'>    <img className='w-80 md:w-[400px]  hover:scale-105 transition-transform duration-500' src="/img2.webp" alt="" /></div>
         </div>
       </div>
 
