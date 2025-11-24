@@ -12,7 +12,7 @@ function Home() {
         <div className='m-15 mt-0 p-8 text-center border-indigo bg-[#F4F8FF]  shadow-xl rounded-3xl font-extrabold font-mono'>
           <h1 className='text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-green-600 to-indigo-900 bg-clip-text text-transparent drop-shadow-sm tracking-wide'>ClearWaste</h1>
           <p className='text-2xl text-gray-700 font-medium italic"'>“Smarter Disposal, Cleaner Tomorrow.”</p>
-<div className='flex justify-center items-center gap-6 mt-6'>
+<div className='md:flex justify-center items-center gap-6 mt-6'>
 
             <img src="/pexels-julia-m-cameron-6995367.jpg" alt="" className='w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105'/>
                         <img src="/pexels-cottonbro-6591427.jpg" alt="" className='w-72 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105'/>
