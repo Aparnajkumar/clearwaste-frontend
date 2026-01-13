@@ -45,7 +45,7 @@ useEffect(()=>{
 return (
     <>
         <div className="container-fluid min-h-screen justify-center items-center rounded bg-green-50">
-            <div className="grid grid-cols-3 pt-10 ">
+            <div className="grid md:grid-cols-3 pt-10 ">
                 <div className=""></div>
                 <div className=" shadow p-10 justify-center text-center rounded-3xl mt-10 bg-white">
                     <h1 className='text-2xl text-center p-3 text-green-950 font-bold'>EMPLOYEE LOGIN</h1>
