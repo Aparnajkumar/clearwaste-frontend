@@ -4,21 +4,20 @@ import { Link } from 'react-router-dom'
 function Header() {
   return (
     <>
-      <div className="bg-indigo-300 grid grid-cols-2 text-white md:font-bold p-5 gap-3">
-        <div className=''>
-          {/* <img className="w-33 "src="public/logo.png" alt="" /> */}
-          <Link to={"/"}>          <h1 className=' md:text-3xl'><span className='text-indigo-900'>Clear</span>Waste</h1></Link>
-        </div>
-        <div className='flex md:space-x-10 space-x-4  ms-auto'>
-          <Link to={"/about"}>
-            <div className='hover:text-gray-700'>Our Story</div>
-          </Link>
-          {/* <Link to={"/auth"}> <div className='hover:text-gray-700'>Book</div></Link> */}
-          <Link to={"/contact"}>      <div className='hover:text-gray-700'>Contact Us</div></Link>
-          <Link to={"/auth"}>      <div className='hover:text-gray-700'>Login</div></Link>
-          {/* <Link to={"/dashboard"}>          <div className="">Admin</div></Link> */}
-        </div>
-      </div>
+      <div className=" bg-gradient-to-b from-green-800 to-green-200 text-white shadow-lg p-3 flex justify-between relative z-50">
+  <Link to="/">
+    <h1 className="text-3xl font-bold tracking-wide">
+      <span className="text-white">Clear</span>
+      <span className="text-[#1E293B]">Waste</span>
+    </h1>
+  </Link>
+  <div className="flex space-x-6 text-white font-medium">
+    <Link className="hover:text-yellow-300" to={"/about"}>Our Story</Link>
+    <Link className="hover:text-yellow-300" to={"/contact"}>Contact</Link>
+    <Link className="hover:text-yellow-300" to={"/auth"}>Login</Link>
+  </div>
+</div>
+
     </>
   )
 }

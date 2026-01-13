@@ -18,6 +18,9 @@ import Managebooking from './Admin/Managebooking'
 import Managepickup from './Admin/Managepickup'
 import { ToastContainer } from 'react-toastify'
 import Profile from './User/Profile'
+import Viewbookings from './Employee/Viewbookings'
+import Emplogin from './Employee/Emplogin'
+import Registeremp from './Admin/Registeremp'
 
 function App() {
 
@@ -42,6 +45,9 @@ function App() {
         <Route path="/managebooking" element={<Managebooking />} />
         <Route path="/managepickup" element={<Managepickup />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/viewbookings" element={<Viewbookings />} />
+        <Route path="/emplogin" element={<Emplogin />} />
+        <Route path="/empreg" element={<Registeremp />} />
       </Routes>
                     <ToastContainer position="top-center" autoClose={3000} theme='colored'/>
 

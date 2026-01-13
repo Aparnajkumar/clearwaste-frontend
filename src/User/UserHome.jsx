@@ -29,8 +29,9 @@ function UserHome() {
 
   useEffect(() => {
     if (sessionStorage.getItem("token"))
-      // setToken(sessionStorage.getItem("token")); {
-     { const user = JSON.parse(sessionStorage.getItem("existingUser"))
+    // setToken(sessionStorage.getItem("token")); {
+    {
+      const user = JSON.parse(sessionStorage.getItem("existingUser"))
       if (token) setToken(token)
 
       if (user) {
@@ -51,25 +52,33 @@ function UserHome() {
             {/* <div className='flex '><FaUserCircle className='text-3xl ' />
               <h1 className='font-extrabold  relative z-10'>Welcome <span className='text-green-800'>{profiledetails?.username}</span></h1>
             </div> */}
-            <p className='text-center z-10 pt-4 text-2xl font-bold relative text-indigo-900'>We are there to Clear your waste</p>
+            <p className='text-center z-10 pt-4 text-2xl font-bold relative text-[#1E293B] '>We are there to Clear your waste</p>
 
-            <div className="grid z-20 grid-cols-1 md:grid-cols-3  mt-15  text-center  ">
+            <div className="grid z-20 grid-cols-1 md:grid-cols-3  mt-15 gap-6 text-center  ">
 
-              <div className='shadow-lg rounded  bg-sky-100 p-3 m-2'>
+              <div className='bg-white/85 backdrop-blur-sm shadow-xl rounded-lg p-5 hover:scale-105 transition"'>
                 <h1 className='font-bold p-2'>Book PickUp</h1>
-                <p className='p-3'>Fed up with heap of waste at your place. we are a click away. Book us and clear your waste.</p>
-                <Link to={"/bookpickup"}>                <button type="button" className='bg-sky-800 rounded text-white p-2'>Book now</button></Link>
+                <p className="text-sm text-gray-600 my-3">
+                  Have waste piling up at your place? We are just a click away!
+                </p>
+                <Link to={"/bookpickup"}>
+                  <button type="button" className='bg-[#06D6A0] hover:bg-[#05bf8f] transition text-white rounded-lg px-4 py-2'>Book now</button></Link>
               </div>
-              <div className='shadow-lg rounded  bg-sky-100 p-3 m-2'>
+              <div className='bg-white/85 backdrop-blur-sm shadow-xl rounded-lg p-5 hover:scale-105 transition"'>
                 <h1 className='font-bold p-2'>Edit Profile</h1>
-                <p className='p-3'>Fed up with heap of waste at your place. we are a click away. View you Profile.</p>
-                <Link to={"/profile"}>                <button type="button" className='bg-sky-800 rounded text-white p-2'>Edit</button></Link>
+                <p className="text-sm text-gray-600 my-3">
+                  Update your personal details to serve you better.
+                </p>
+                <Link to={"/profile"}>
+                  <button type="button" className='bg-[#06D6A0] hover:bg-[#05bf8f] transition text-white rounded-lg px-4 py-2'>Edit</button></Link>
               </div>
-              <div className='shadow-lg rounded  bg-sky-100 p-3 m-2'>
+              <div className='bg-white/85 backdrop-blur-sm shadow-xl rounded-lg p-5 hover:scale-105 transition'>
                 <h1 className='font-bold p-2'>My Bookings</h1>
-                <p className='p-3'>Fed up with heap of waste at your place. we are a click away. See your booking history here.</p>
+                <p className="text-sm text-gray-600 my-3">
+                  Track your waste pick-up and booking history.
+                </p>
                 <Link to={"/booking"}>
-                  <button type="button" className='bg-sky-800 rounded text-white p-2'>Booking history</button>
+                  <button type="button" className='bg-[#06D6A0] hover:bg-[#05bf8f] transition text-white rounded-lg px-4 py-2'>Booking history</button>
 
                 </Link>              </div>
             </div>

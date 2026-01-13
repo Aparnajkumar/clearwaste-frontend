@@ -1,38 +1,58 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <>
-      <div className="bg-indigo-400 text-white grid grid-cols-1 md:grid-cols-4 p-3">
-        <div className='p-5'>
-          <h1 className='text-center text-2xl'>ClearWaste</h1>
-          <p >Our team helps to manage your waste. We believe in keeping our mother nature clean </p>
+    <div className="bg-[#23886d] text-white py-10 px-6 md:px-16">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+        {/* BRAND INFO */}
+        <div>
+          <h1 className="text-2xl font-bold">ClearWaste</h1>
+          <p className="mt-3 text-gray-200">
+            Helping you manage your waste effectively. Our mission is to keep our Mother Earth clean and sustainable.
+          </p>
         </div>
-        <div className='text-center'>
-          <h1 className='text-2xl p-2'>Company Information</h1>
-          <ul className='none'>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Our Team</li>
+
+        {/* COMPANY LINKS */}
+        <div className="text-center md:text-left">
+          <h2 className="text-xl font-semibold mb-2">Company</h2>
+          <ul className="space-y-1">
+            <li><Link className="hover:text-yellow-300" to="/">Home</Link></li>
+            <li><Link className="hover:text-yellow-300" to="/about">About Us</Link></li>
+            <li className="hover:text-yellow-300 cursor-default">Our Team</li>
           </ul>
         </div>
-        <div className='text-center'>
-          <h1 className='text-2xl p-2'>Get Started</h1>
-          <ul className='flex '>
-            <li className=''><img className=''src="https://yowasteapp.com/wp-content/uploads/elementor/thumbs/A47B9C575CC9ABD2A884DBD85D2414B0BB96-2-pi7ude4zsfpapetpcyni2ewqlq43ciz0xevm2oipv8.png" alt="" /></li>
-            <li><img src="https://yowasteapp.com/wp-content/uploads/elementor/thumbs/App-Store-Transparent-border-2-pi7titfzhfuj218iw8vdgmnyzit9yylce2y13nuq9g.png" alt="" /></li>
-          </ul>
+
+        {/* APP DOWNLOAD */}
+        <div className="text-center md:text-left">
+          <h2 className="text-xl font-semibold mb-2">Get the App</h2>
+          <div className="flex justify-center md:justify-start space-x-3 mt-2">
+            <img className="w-28 hover:scale-105 transition" src="https://yowasteapp.com/wp-content/uploads/elementor/thumbs/A47B9C575CC9ABD2A884DBD85D2414B0BB96-2-pi7ude4zsfpapetpcyni2ewqlq43ciz0xevm2oipv8.png" alt="Play Store" />
+            <img className="w-28 hover:scale-105 transition" src="https://yowasteapp.com/wp-content/uploads/elementor/thumbs/App-Store-Transparent-border-2-pi7titfzhfuj218iw8vdgmnyzit9yylce2y13nuq9g.png" alt="App Store" />
+
+
+          </div>        <p className=" text-amber-200 mt-3">
+  For staff access? <Link to="/emplogin" className="underline">Employee Login</Link>
+</p>
         </div>
-        <div className='text-center'>
-          <h1 className='p-2 text-2xl'>Company Policies</h1>
-          <ul className='none '>
-            <li>Terms & Conditions</li>
-            <li>Privacy Policy</li>
-            <li>Refund/Cancellation Policy</li>
+
+        {/* POLICIES */}
+        <div className="text-center md:text-left">
+          <h2 className="text-xl font-semibold mb-2">Policies</h2>
+          <ul className="space-y-1">
+            <li className="hover:text-yellow-300 cursor-default">Terms & Conditions</li>
+            <li className="hover:text-yellow-300 cursor-default">Privacy Policy</li>
+            <li className="hover:text-yellow-300 cursor-default">Refund / Cancellation</li>
           </ul>
         </div>
       </div>
-    </>
+
+      {/* COPYRIGHT */}
+      <div className="text-center text-gray-300 mt-8 border-t border-gray-100 pt-4 text-sm">
+        © {new Date().getFullYear()} ClearWaste. All rights reserved.
+      </div>
+    </div>
   )
 }
 

@@ -48,19 +48,19 @@ function Booking() {
         <>
             <Userheader />
             <div className=' w-full min-h-screen'>
-                <h1 className="text-2xl font-bold text-center text-indigo-900 p-6">
+                <h1 className="text-2xl font-bold text-center text-slate-900 p-6">
                     My Booking History
                 </h1>
 
                 <div className="flex justify-center items-center">
-                    <table className='border border-gray-200 p-5  shadow'>
-                        <thead>
+                    <table className='border border-gray-200 min-w-[80%] shadow-xl rounded-lg overflow-hidden'>
+                        <thead className='bg-green-300 '>
                             <tr>
-                                <th className='border-1 border-gray-500 p-3 bg-blue-200'>Date</th>
-                                <th className='border-1 border-gray-500 p-3 bg-blue-200'>Type of Waste</th>
-                                <th className='border-1 border-gray-500 p-3 bg-blue-200'>Address</th>
-                                <th className='border-1 border-gray-500 p-3 bg-blue-200'>Status</th>
-                                <th className='border-1 border-gray-500 p-3 bg-blue-200'>Payment</th>
+                                <th className='border-1 border-gray-500 p-3 '>Date</th>
+                                <th className='border-1 border-gray-500 p-3 '>Type of Waste</th>
+                                <th className='border-1 border-gray-500 p-3 '>Address</th>
+                                <th className='border-1 border-gray-500 p-3 '>Status</th>
+                                <th className='border-1 border-gray-500 p-3'>Payment</th>
                             </tr>
                         </thead>
                         <tbody>

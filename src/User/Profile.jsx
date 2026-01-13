@@ -61,34 +61,38 @@ function Profile() {
     return (
         <>
             <Userheader />
-            <div className="shadow-2xl rounded md:m-25  p-5  gap-3 ">
-                <h2 className="text-2xl font-bold text-center  text-indigo-900 mb-6">Profile</h2>
-            
-                    <div className=""></div>
-                    <div className=''>
-                        <div className='flex justify-center items-center  mb-5'>
-                            <label htmlFor="" className='me-7'>Name:</label> <input value={profiledetails.username} onChange={(e) => setProfiledetails({ ...profiledetails, username: e.target.value })} className='border  rounded border-blue-300 bg-white w-full' type="text" />
-
+<div className='grid grid-cols-[2fr_3fr_2fr]'>
+    <div className=""></div>
+                <div className="shadow-2xl rounded md:m-25  p-5  gap-3 ">
+                    <h2 className="text-2xl font-bold text-center  text-slate-900 mb-6">Profile</h2>
+                
+                        <div className=""></div>
+                        <div className=''>
+                            <div className='flex justify-center items-center  mb-5'>
+                                <label htmlFor="" className='me-7'>Name:</label> <input value={profiledetails.username} onChange={(e) => setProfiledetails({ ...profiledetails, username: e.target.value })} className='border  rounded border-blue-300 bg-white w-full' type="text" />
+    
+                            </div>
+                            <div className='flex mb-5'>
+                                <label className='me-8' htmlFor="">Email:</label> <input value={profiledetails.userEmail} onChange={(e) => setProfiledetails({ ...profiledetails, userEmail: e.target.value })} className='border border-blue-300 bg-white w-full ' type="text" />
+    
+                            </div>
+                            <div className='flex mb-5'>
+                                <label htmlFor="" className='me-1'>Password:</label> <input value={profiledetails.password} onChange={(e) => setProfiledetails({ ...profiledetails, password: e.target.value })} className='bg-white border border-blue-300 w-full' type="text" />
+    
+                            </div>
                         </div>
-                        <div className='flex mb-5'>
-                            <label className='me-8' htmlFor="">Email:</label> <input value={profiledetails.userEmail} onChange={(e) => setProfiledetails({ ...profiledetails, userEmail: e.target.value })} className='border border-blue-300 bg-white w-full ' type="text" />
-
-                        </div>
-                        <div className='flex mb-5'>
-                            <label htmlFor="" className='me-1'>Password:</label> <input value={profiledetails.password} onChange={(e) => setProfiledetails({ ...profiledetails, password: e.target.value })} className='bg-white border border-blue-300 w-full' type="text" />
-
-                        </div>
+                        <div className=""></div>
+                    {/* <div className='flex gap-1'>
+                        <label htmlFor="">Address:</label> <input value={profiledetails.address} onChange={(e) => setProfiledetails({ ...profiledetails, address: e.target.value })} className='bg-white border border-blue-300 w-full' type="text" />
+    
+                    </div > */}
+                    <div className='flex justify-center items-center'>
+                        <button onClick={handleupdate} type='button' className='w-30 bg-[#06D6A0]  hover:bg-green-700 hover:text-white p-2 m-auto rounded'>UPDATE</button>
+    
                     </div>
-                    <div className=""></div>
-                {/* <div className='flex gap-1'>
-                    <label htmlFor="">Address:</label> <input value={profiledetails.address} onChange={(e) => setProfiledetails({ ...profiledetails, address: e.target.value })} className='bg-white border border-blue-300 w-full' type="text" />
-
-                </div > */}
-                <div className='flex justify-center items-center'>
-                    <button onClick={handleupdate} type='button' className='w-30 bg-indigo-950 text-white hover:bg-indigo-800 hover:text-white p-2 m-auto rounded'>UPDATE</button>
-
                 </div>
-            </div>
+                <div className=""></div>
+</div>
             <Footer />
         </>
     )

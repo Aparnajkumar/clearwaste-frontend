@@ -1,34 +1,42 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Userheader() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    sessionStorage.removeItem("token")
-    sessionStorage.removeItem("existingUser")
-    navigate("/")
-  }
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("existingUser");
+    navigate("/");
+  };
 
   return (
-    <>
-      <div className="bg-indigo-300 grid grid-cols-2 text-white md:font-bold p-5 gap-3">
-        <div className=''>
-          {/* <img className="w-33 "src="public/logo.png" alt="" /> */}
-          <h1 className='font-serif md:text-3xl'><span className='text-indigo-900'>Clear</span>Waste</h1>
-        </div>
-        <div className='md:grid grid-cols-2  ms-auto'>
-          <Link to={"/userhome"}> <div className='border p-2 rounded-2xl border-amber-100 bg-indigo-200 text-green-950 me-5'>Home</div></Link>
+    <div className="bg-[#06D6A0] flex justify-between items-center px-6 py-4 shadow-md">
+      
+      {/* Logo / Brand */}
+      <h1 className="text-3xl font-bold tracking-wide">
+        <span className="text-white">Clear</span>
+        <span className="text-[#1E293B]">Waste</span>
+      </h1>
 
+      {/* Navigation Buttons */}
+      <div className="flex space-x-5">
+        <Link
+          to="/userhome"
+          className="bg-white text-[#065F46] px-4 py-2 rounded-full font-medium hover:bg-[#065F46] hover:text-white transition"
+        >
+          Home
+        </Link>
 
-          {/* <Link to={"/contact"}>      <div className='hover:text-gray-700'>Contact Us</div></Link> */}
-          {/* <Link to={"/auth"}>      <div className='hover:text-gray-700'>Login</div></Link> */}
-          {/* <Link to={"/dashboard"}>          <div className="">Admin</div></Link> */}
-          <button onClick={handleLogout} className='border p-2 rounded-2xl border-amber-100 bg-indigo-200 text-green-950' >Logout</button>
-        </div>
+        <button
+          onClick={handleLogout}
+          className="bg-red-700 text-white px-4 py-2 rounded-full hover:bg-red-800 transition"
+        >
+          Logout
+        </button>
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
-export default Userheader
+export default Userheader;

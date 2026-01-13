@@ -1,33 +1,56 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Adminheader() {
-      const navigate = useNavigate()
+  const navigate = useNavigate();
 
-      const handleLogout = () => {
-            sessionStorage.removeItem("token")
-            sessionStorage.removeItem("existingUser")
-            navigate("/")
-      }
-      return (
-            <>
-                  <nav className='bg-indigo-300 p-5 flex justify-evenly items-center'>
-                        <Link to={"/dashboard"}>
-                              <strong className='md:ms-10 text-black md:text-3xl'> Dashboard</strong>
-                        </Link>
-                        <Link to={"/manageuser"}>
-                              <p className='border-4 border-blue-200 p-1 rounded bg-indigo-200'>Users</p>
-                        </Link>
-                        <Link to={"/managebooking"}>
-                              <p className='border-4 border-blue-200 p-1 rounded bg-indigo-200'>Bookings</p>
-                        </Link>
-                        <Link to={"/managepayment"}>
-                              <p className='border-4 border-blue-200 p-1 rounded bg-indigo-200'>Payments</p>
-                        </Link>
-                        <button onClick={handleLogout} className='border p-2 rounded-2xl border-amber-200 bg-green-300 text-green-950' >Logout</button>
-                  </nav>
-            </>
-      )
+  const handleLogout = () => {
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("existingUser");
+    navigate("/");
+  };
+
+  return (
+    <nav className="w-full bg-[#347973] shadow-md py-4 px-8 flex flex-wrap items-center justify-between">
+      
+<Link to="/dashboard">
+  <h1 className="text-white text-2xl font-bold tracking-wide">
+      Admin Dashboard
+    </h1>
+  
+</Link>
+
+      {/* CENTER - Navigation Links */}
+      <div className="flex gap-4">
+        <Link
+          to="/manageuser"
+          className=" text-white  px-3 py-1 rounded-lg hover:bg-[#065F46] hover:text-white transition"
+        >
+          Users
+        </Link>
+        <Link
+          to="/managebooking"
+          className="text-white  px-3 py-1 rounded-lg hover:bg-[#065F46] hover:text-white transition"
+        >
+          Bookings
+        </Link>
+        <Link
+          to="/managepayment"
+          className="text-white  px-3 py-1 rounded-lg hover:bg-[#065F46] hover:text-white transition"
+        >
+          Payments
+        </Link>
+      </div>
+
+      {/* RIGHT - Logout Button */}
+      <button
+        onClick={handleLogout}
+        className="px-4 py-2 bg-red-800 hover:bg-red-600 text-white font-semibold rounded-lg transition shadow-sm w-full md:w-auto"
+      >
+        Logout
+      </button>
+    </nav>
+  );
 }
 
-export default Adminheader
+export default Adminheader;
