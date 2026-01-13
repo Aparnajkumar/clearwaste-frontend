@@ -13,54 +13,54 @@ function TrackStatus() {
 
 let watchId = null;
 
-const startLiveTracking = (bookingId) => {
-  if (!navigator.geolocation) {
-    alert("Geolocation not supported");
-    return;
-  }
+// const startLiveTracking = (bookingId) => {
+//   if (!navigator.geolocation) {
+//     alert("Geolocation not supported");
+//     return;
+//   }
 
-  const token = sessionStorage.getItem("token");
+//   const token = sessionStorage.getItem("token");
 
-  watchId = navigator.geolocation.watchPosition(
-    async (position) => {
-      const location = {
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude
-      };
+//   watchId = navigator.geolocation.watchPosition(
+//     async (position) => {
+//       const location = {
+//         latitude: position.coords.latitude,
+//         longitude: position.coords.longitude
+//       };
 
-      const reqheader = {
-        "Authorization": `Bearer ${token}`,
-      };
+//       const reqheader = {
+//         "Authorization": `Bearer ${token}`,
+//       };
 
-      await getemplocAPI(bookingId, location, reqheader);
-      console.log("Employee location updated");
-    },
-    (error) => {
-      console.log(error);
-    },
-    {
-      enableHighAccuracy: true,
-      maximumAge: 0,
-      timeout: 5000
-    }
-  );
-};
+//       await getemplocAPI(bookingId, location, reqheader);
+//       console.log("Employee location updated");
+//     },
+//     (error) => {
+//       console.log(error);
+//     },
+//     {
+//       enableHighAccuracy: true,
+//       maximumAge: 0,
+//       timeout: 5000
+//     }
+//   );
+// };
 
-const stopLiveTracking = () => {
-  if (watchId) {
-    navigator.geolocation.clearWatch(watchId);
-    watchId = null;
-  }
-};
+// const stopLiveTracking = () => {
+//   if (watchId) {
+//     navigator.geolocation.clearWatch(watchId);
+//     watchId = null;
+//   }
+// };
 
-useEffect(() => {
-  const interval = setInterval(async () => {
+// useEffect(() => {
+//   const interval = setInterval(async () => {
     
-    setEmployeeLocation(data.employeeLocation);
-  }, 5000);
+//     setEmployeeLocation(data.employeeLocation);
+//   }, 5000);
 
-  return () => clearInterval(interval);
-}, []);
+//   return () => clearInterval(interval);
+// }, []);
 
 
 
@@ -106,7 +106,7 @@ useEffect(() => {
       </div>
 
 
-{booking.location?.latitude && booking.location?.longitude ? (
+{/* {booking.location?.latitude && booking.location?.longitude ? (
   <iframe
     width="200"
     height="150"
@@ -115,7 +115,7 @@ useEffect(() => {
   ></iframe>
 ) : (
   <span className="text-red-500">No Location</span>
-)}
+)} */}
 
 
       <Footer />
